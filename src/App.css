@@ -1,7 +1,16 @@
 .App {
-  text-align: center;
+  justify-content: space-evenly;
+  background-color: #f5f6fa;
+  padding: 20px;
 }
 
+.app__header {
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 2%;
+  align: center;
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
