@@ -8,12 +8,14 @@ function Display( { genreData }) {
     return (
         <div className="app__display">
             {genreData.map(movie =>
-             <InfoBox 
-                title={movie.movie_title}
-                genres={movie.genres}
-                tomatometer_rating={movie.tomatometer_rating}
-                audience_rating={movie.audience_rating}
-             />
+                <InfoBox 
+                    title={movie.movie_title + " (" + movie.original_release_date + ")"}
+                    genres={movie.genres}
+                    tomatometer_rating={movie.tomatometer_rating}
+                    audience_rating={movie.audience_rating}
+                    directors={movie.directors}
+                    runtime={movie.runtime + " Minutes"}
+                />
             )}
         </div>
     )
