@@ -2,11 +2,11 @@ import React from 'react'
 import { Card, CardContent, Typography } from "@material-ui/core";
 import './InfoBox.css'
 
-function InfoBox( { title, genres, tomatometer_rating, audience_rating, directors, runtime }) {
+function InfoBox( { title, genres, tomatometer_rating, audience_rating, directors, runtime, metascore, imdb_score, poster }) {
     console.log(title)
     return (
         <div className="display__infobox">
-            <Card>
+            <Card className="display__card">
                 <CardContent>
                     <Typography color="textPrimary" gutterBottom>
                     {title}
@@ -18,7 +18,13 @@ function InfoBox( { title, genres, tomatometer_rating, audience_rating, director
                         Tomato Rating: {tomatometer_rating}
                     </Typography>
                     <Typography color="textSecondary" gutterBottom>
-                        Audience Rating: {audience_rating}
+                        Tomato Audience Rating: {audience_rating}
+                    </Typography>
+                    <Typography color="textSecondary" gutterBottom>
+                        Metascore: {metascore}
+                    </Typography>
+                    <Typography color="textSecondary" gutterBottom>
+                        IMDB: {imdb_score}
                     </Typography>
                     <Typography color="textSecondary" gutterBottom variant="subtitle2">
                         Directors: {directors}
@@ -27,6 +33,7 @@ function InfoBox( { title, genres, tomatometer_rating, audience_rating, director
                         Runtime: {runtime}
                     </Typography>
                 </CardContent>
+                <img className="infobox__img" src={poster}/>
             </Card>
         </div>
       );

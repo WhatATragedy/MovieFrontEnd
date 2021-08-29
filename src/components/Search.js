@@ -10,7 +10,7 @@ function Search( {searchGenre}) {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="search__form">
                 <input type="text" className="" value={searchVal} onChange={e => setSearchVal(e.target.value)}>
                 </input>
             </form>

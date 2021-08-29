@@ -1,3 +1,15 @@
 .display__infobox {
     padding: 0.5%;
+    flex-direction: wrap;
+}
+.infobox__img {
+    float: right;
+    height: 15%; 
+    width: 15%;
+    margin: 1%
+} 
+.display__card {
+    flex-direction: wrap;
+    display: flex;
+    justify-content: space-between;
 }
