@@ -1,0 +1,27 @@
+.app__search {
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    background-color: #ECEFF4;
+}
+.search__filters {
+    float: left;
+    padding: 2%;
+    display: flex
+}
+
+.search__datepicker {
+    padding: 1%;
+
+}
+.search__genre {
+    padding: 1%
+}
+.search__button_div {
+    position: relative
+}
+.search__button {
+    position: absolute; 
+    bottom: 0;
+}
