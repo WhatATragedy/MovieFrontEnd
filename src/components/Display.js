@@ -1,4 +1,3 @@
-import { ListItemAvatar } from '@material-ui/core';
 import React from 'react'
 import InfoBox from './InfoBox';
 import './Display.css'

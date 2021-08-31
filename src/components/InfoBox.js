@@ -33,7 +33,7 @@ function InfoBox( { title, genres, tomatometer_rating, audience_rating, director
                         Runtime: {runtime}
                     </Typography>
                 </CardContent>
-                <img className="infobox__img" src={poster}/>
+                <img className="infobox__img" alt="Oh No, Cannot Be Loaded" src={poster}/>
             </Card>
         </div>
       );

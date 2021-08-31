@@ -16,11 +16,11 @@ function Search( {searchGenre}) {
       setSelectedDate(date);
     };
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        if (!searchVal) return;
-        // searchGenre(searchVal);
-    }
+    // const handleSubmit = e => {
+    //     e.preventDefault();
+    //     if (!searchVal) return;
+    //     // searchGenre(searchVal);
+    // }
 
     useEffect(() => {
         const getGenres = async () => {
