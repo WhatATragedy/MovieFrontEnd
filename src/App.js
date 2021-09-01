@@ -6,9 +6,11 @@ import {sortData} from './utils/utils'
 
 import Search from './components/Search';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import NavBar from './components/NavBar';
 
 function App() {
   const [genreSearchData, setGenreSearchData] = useState([])
+  const [searched, setSearched] = useState(false)
 
   
   const searchGenre = (genre, date) => {
@@ -20,26 +22,37 @@ function App() {
       }
     })
     .then((response) => {
-      console.log(response.data)
       const sortedData = sortData(response.data)
+      console.log(sortedData)
       setGenreSearchData(sortedData)
+      setSearched(true)
     });
   }
 
-  console.log("")
-  if (genreSearchData.length === 0){
+  if (genreSearchData.length === 0 && !searched){
     return (
       <div className="App">
+        <NavBar className="nav"/>
         <div className="app__header_not_searched">
           <Search searchGenre={searchGenre} />
         </div>
       </div>
     )
-
-  } 
+  } else if (genreSearchData.length === 0 && searched){
+    return (
+      <div className="App">
+        <NavBar className="nav"/>
+        <div className="app__header_not_searched">
+          <Search searchGenre={searchGenre} />
+        </div>
+        <p> Apologies, We have no results...</p>
+      </div>
+    )
+  }
   return (
     <div className="App">
-      <ArrowBackIcon fontSize="large" onClick={() => setGenreSearchData([])}/>
+      <NavBar/>
+      <ArrowBackIcon className="app__backarrow" fontSize="large" onClick={() => setGenreSearchData([])}/>
       <Display genreData={genreSearchData} />
     </div>
   );

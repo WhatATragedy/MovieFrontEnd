@@ -3,14 +3,14 @@ import "./SearchBar.css";
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
 
-function SearchBar({ placeholder, data, setSearchValue }) {
+function SearchBar({ placeholder, data, dateFilter, searchGenre}) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
   const handleGenreClick = (event) => {
     const searchWord = event.target.innerText;
     setWordEntered(searchWord)
-    setSearchValue(searchWord)
+    searchGenre(searchWord, dateFilter)
     setFilteredData([])
 
   }
@@ -47,7 +47,7 @@ function SearchBar({ placeholder, data, setSearchValue }) {
         />
         <div className="searchIcon">
           {filteredData.length === 0 ? (
-            <SearchIcon />
+            <SearchIcon className="filter__button" onClick={() => searchGenre(wordEntered, dateFilter)}/>
           ) : (
             <CloseIcon id="clearBtn" onClick={clearInput} />
           )}

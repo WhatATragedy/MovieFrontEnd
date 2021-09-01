@@ -1,0 +1,13 @@
+.nav {
+    width: 98%;
+    height: 8%;
+    display: flex;
+    padding: 1%;
+    display: flex;
+  }
+.nav__logo {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+  

@@ -6,10 +6,9 @@ import './Search.css';
 import SearchBar from "./SearchBar";
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import Datetime from 'react-datetime';
-import { Button } from "@material-ui/core";
 
-function Search( {searchGenre}) {
-    const [searchVal, setSearchVal] = useState()
+
+function Search( {searchGenre }) {
     const [selectedDate, setSelectedDate] = useState();
     const [availableGenres, setAvailableGenres] = useState([])
     const [showDatePicker, setShowDatePicker] = useState(false)
@@ -33,27 +32,27 @@ function Search( {searchGenre}) {
     
         return (
         <div className="app__search">
-            <SearchBar className="search__bar" placeholder="Search For a Movie Genre..." data={availableGenres} setSearchValue={setSearchVal} />
-            <p className="search_filter">Filter for Movies made after a certain date</p>
+          <div className="search__filters">
+            <SearchBar className="search__bar" placeholder="Search For a Movie Genre..." data={availableGenres} searchGenre={searchGenre} dateFilter={selectedDate} />
+            {/* <p>Filter for Movies made after a certain date</p> */}
             <div className="search_datepicker_toggle" onClick = {() => setShowDatePicker(!showDatePicker)}>
-                
-                <DateRangeIcon fontSize="large"/>
+                <DateRangeIcon fontSize="large" style={{fill: "#D8DEE9"}}/>
             </div>
             {showDatePicker &&
                 <Datetime 
-                className="search__datepicker"
                 value={selectedDate}
                 initialValue={selectedDate}
                 dateFormat="YYYY" 
                 timeFormat={false}
                 initialViewMode='years'
                 onChange={handleDateChange}
-                input={false}
             />
 
             }
-            <Button variant="contained" onClick={() => searchGenre(searchVal, selectedDate)}>Find Me Some Movies</Button>
-            
+          </div>
+          {selectedDate &&
+            <p>Filtering to movies made after {selectedDate.format('YYYY')}</p>
+          } 
         </div>
         // implement this at some point https://next.material-ui.com/components/date-picker/ 
     //     <DatePicker

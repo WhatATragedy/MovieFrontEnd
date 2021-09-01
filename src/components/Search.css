@@ -1,18 +1,19 @@
 .app__search {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    width: 80%;
+    padding: 5%;
 }
 .search__bar {
     position: absolute;
 }
-.search__datepicker {
-    z-index: 1;
-    position: absolute;
-    margin-top: 20%;
-    margin-left: 20%;
-
-}
 p {
     color:#ECEFF4;
   }
+.search__datepicker{
+    z-index: 99 !important;
+}
+.search__filters {
+    display: flex;
+}
+.search_datepicker_toggle {
+    padding: 1%;
+}
