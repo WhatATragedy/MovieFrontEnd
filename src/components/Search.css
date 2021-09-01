@@ -1,27 +1,18 @@
 .app__search {
-    padding: 1%;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin: auto;
-    background-color: #ECEFF4;
 }
-.search__filters {
-    float: left;
-    padding: 2%;
-    display: flex
+.search__bar {
+    position: absolute;
 }
-
-.search__datepicker {
-    padding: 1%;
+.search_datepicker {
+    z-index: 1;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 20%;
 
 }
-.search__genre {
-    padding: 1%
-}
-.search__button_div {
-    position: relative
-}
-.search__button {
-    position: absolute; 
-    bottom: 0;
-}
+p {
+    color:#ECEFF4;
+  }

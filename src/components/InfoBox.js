@@ -3,10 +3,9 @@ import { Card, CardContent, Typography } from "@material-ui/core";
 import './InfoBox.css'
 
 function InfoBox( { title, genres, tomatometer_rating, audience_rating, directors, runtime, metascore, imdb_score, poster }) {
-    console.log(title)
     return (
         <div className="display__infobox">
-            <Card className="display__card">
+            <Card className="display__card" raised={true}>
                 <CardContent>
                     <Typography color="textPrimary" gutterBottom>
                     {title}

@@ -1,6 +1,7 @@
 .display__infobox {
     padding: 0.5%;
     flex-direction: wrap;
+    background-image: linear-gradient(90deg, #2E3440, #4C566A);
 }
 .infobox__img {
     float: right;

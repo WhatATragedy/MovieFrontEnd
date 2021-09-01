@@ -1,8 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
   justify-content: space-evenly;
-  background-color: #4C566A;
+  background-image: linear-gradient(90deg, #2E3440, #4C566A);
+  vertical-align: top; /* here */
 }
-
+.app__header_not_searched {
+  top: 5%;
+  vertical-align: top; /* here */
+  position: absolute;
+  height: 30%;
+}
 .app__header {
   width: 100%;
   justify-content: space-evenly;
