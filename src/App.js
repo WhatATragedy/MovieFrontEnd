@@ -1,15 +1,15 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import Display from './components/Display';
 import {sortData} from './utils/utils'
-import SearchBar from './components/SearchBar';
+
 import Search from './components/Search';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 function App() {
   const [genreSearchData, setGenreSearchData] = useState([])
-  const [availableGenres, setAvailableGenres] = useState([])
+
   
   const searchGenre = (genre, date) => {
     axios({

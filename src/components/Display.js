@@ -3,7 +3,6 @@ import InfoBox from './InfoBox';
 import './Display.css'
 
 function Display( { genreData }) {
-    console.log(typeof genreData);
     return (
         <div className="app__display">
             {genreData.map(movie =>

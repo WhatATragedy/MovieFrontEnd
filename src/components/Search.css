@@ -6,7 +6,7 @@
 .search__bar {
     position: absolute;
 }
-.search_datepicker {
+.search__datepicker {
     z-index: 1;
     position: absolute;
     margin-top: 20%;

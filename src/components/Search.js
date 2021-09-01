@@ -9,8 +9,7 @@ import Datetime from 'react-datetime';
 import { Button } from "@material-ui/core";
 
 function Search( {searchGenre}) {
-    const [searchVal, setSearchVal] = useState("Western")
-    const [genreList, setGenreList] = useState(["Action", "Horror", "Western"])
+    const [searchVal, setSearchVal] = useState()
     const [selectedDate, setSelectedDate] = useState();
     const [availableGenres, setAvailableGenres] = useState([])
     const [showDatePicker, setShowDatePicker] = useState(false)
@@ -50,7 +49,6 @@ function Search( {searchGenre}) {
                 initialViewMode='years'
                 onChange={handleDateChange}
                 input={false}
-                className="search_datepicker"
             />
 
             }
